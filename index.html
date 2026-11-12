@@ -1,33 +1,215 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alter Band</title>
+    <meta
+      name="description"
+      content="Alter Band помогает найти сессионного рок-музыканта для записи или концерта за 24 часа."
+    />
+    <link rel="canonical" href="https://alterband.ru/" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Alter Band — поиск сессионных рок-музыкантов</title>
   </head>
   <body>
-    о нас преимущества для кого как работает Faq alter band найди рок-музыканта
-    за 24 часа листай, чтобы узнать больше ↓ слушать о нас Alter Band помогает
-    найти сессионных музыкантов под конкретный проект. Послушай, как они играют,
-    и обсуди условия с теми, кто подходит по звучанию. СПАСАЕМ КОНЦЕРТЫ Знакомые
-    заняты. А концерт уже через неделю.... найти музыканта и договориться всё
-    ещё нужно. преимущества сервиса Видеолента Оцени звучание. Послушай записи и
-    посмотри видео, чтобы понять, подходит ли тебе манера игры. Поиск под задачу
-    Укажи инструмент, формат проекта, дату и бюджет, если он уже известен.
-    Обсуждение напрямую Договорись с музыкантом о материале, подготовке, сроках
-    и гонораре. как работает? Расскажи о проекте Послушай музыкантов Договорись
-    об условиях Например, тебе нужен басист на запись двух инди-треков. Укажи
-    даты и добавь демо, если оно есть. Посмотри примеры игры и выбери, с кем
-    хочешь обсудить проект. Сверьте даты, объём работы и гонорар. 1 2 3 кому
-    подойдёт сервис? Артистам смотреть группам продюсерам Сессионным музыкантам
-    тарифы 0₽ 390₽ 990₽ Бесплатно Pro Премиум Одна анкета и 10 мэтчей в месяц
-    Неограниченное количество анкет и мэтчей Индивидуальная подписка на
-    внеплановые репетиции FAQ Можно найти музыканта на один раз? Да, Alter Band
-    рассчитан в том числе на разовые проекты. Кто определяет гонорар? Артист и
-    музыкант обсуждают сумму и условия оплаты напрямую. Можно оставить заявку,
-    если я сессионный музыкант? ПОПРОБУЙ ПЕРВЫМ Сейчас Alter Band готовится к
-    запуску. Оставь e-mail, чтобы получить приглашение и узнать условия участия
-    в первом запуске. ВВЕДИ СВОЙ E-MAIL ОТПРАВИТЬ о нас преимущества для кого
-    как работает Faq alter band
+    <header class="hero" id="top">
+      <nav class="nav container" aria-label="Основная навигация">
+        <a href="#about">О нас</a>
+        <a href="#benefits">Преимущества</a>
+        <a href="#audience">Для кого</a>
+        <a href="#process">Как работает</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="hero__content container">
+        <div class="wordmark" aria-label="Alter Band">
+          <span>Alter</span><i>Band</i>
+        </div>
+        <h1>Найди рок-музыканта<br />за 24 часа</h1>
+        <a class="hero__scroll" href="#about">Листай, чтобы узнать больше ↓</a>
+        <button class="hero__listen" type="button" aria-label="Слушать">
+          <span aria-hidden="true"></span>Слушать
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--dark" id="about">
+        <div class="container section-grid">
+          <p class="eyebrow">О нас</p>
+          <div class="section-copy">
+            <h2>
+              <span>Alter Band помогает найти</span>
+              <span>сессионных музыкантов</span>
+              <span>под конкретный проект.</span>
+            </h2>
+            <p>
+              <span>Послушай, как они играют, и обсуди</span>
+              <span>условия с теми, кто подходит по звучанию.</span>
+            </p>
+          </div>
+          <div class="about-images">
+            <img class="about-images__detail" src="images/about-detail.png" alt="Музыкант на сцене" />
+            <img class="about-images__main" src="images/about-musician.png" alt="Гитаристка выступает на сцене" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section problem">
+        <div class="container problem__inner">
+          <h2><span>Спасаем</span><span>концерты</span></h2>
+          <img src="images/concert-musician.png" alt="Гитарист на концерте" />
+          <p>Знакомые заняты. А концерт уже через неделю.... найти музыканта<br />и договориться всё ещё нужно.</p>
+        </div>
+      </section>
+
+      <section class="section" id="benefits">
+        <div class="container">
+          <p class="eyebrow">Преимущества<br />сервиса</p>
+          <div class="features">
+            <article class="feature feature--image">
+              <img src="images/benefits-musician.png" alt="Музыкант играет на сцене" />
+              <div>
+                <h3>Видеолента</h3>
+                <p>
+                  <span>Оцени звучание. Послушай записи и посмотри</span>
+                  <span>видео, чтобы понять, подходит ли тебе манера игры.</span>
+                </p>
+              </div>
+            </article>
+            <article class="feature">
+              <h3>Поиск под задачу</h3>
+              <p>Укажи инструмент, формат проекта, дату и бюджет, если он уже известен.</p>
+            </article>
+            <article class="feature">
+              <h3>Обсуждение напрямую</h3>
+              <p>Договорись с музыкантом о материале, подготовке, сроках и гонораре.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="container">
+          <p class="eyebrow">Как работает?</p>
+          <div class="steps" tabindex="0" aria-label="Этапы работы сервиса">
+            <article class="step">
+              <span class="step__number">1</span>
+              <h3>Расскажи о проекте</h3>
+              <p>Например, тебе нужен басист на запись двух инди-треков. Укажи даты и добавь демо, если оно есть.</p>
+              <img src="images/step-project.png" alt="Музыканты обсуждают проект" />
+            </article>
+            <article class="step">
+              <span class="step__number">2</span>
+              <h3>Послушай музыкантов</h3>
+              <p>Посмотри примеры игры и выбери, с кем хочешь обсудить проект.</p>
+              <img src="images/step-listen.png" alt="Музыкант играет на гитаре" />
+            </article>
+            <article class="step">
+              <span class="step__number">3</span>
+              <h3>Договорись об условиях</h3>
+              <p>Сверьте даты, объём работы и гонорар.</p>
+              <img src="images/step-agreement.png" alt="Рок-группа выступает на сцене" />
+            </article>
+          </div>
+          <div class="slider-controls" aria-label="Управление слайдером">
+            <button class="slider-control slider-control--prev" type="button" aria-label="Предыдущий этап">←</button>
+            <button class="slider-control slider-control--next" type="button" aria-label="Следующий этап">→</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="audience">
+        <div class="container audience">
+          <p class="eyebrow">Кому подойдёт сервис?</p>
+          <div class="audience__content">
+            <div class="audience__list">
+              <h2>Артистам</h2>
+              <h2>Группам</h2>
+              <h2>Продюсерам</h2>
+              <h2>Сессионным музыкантам</h2>
+            </div>
+            <a class="audience__preview" href="#signup" aria-label="Смотреть анкету музыканта">
+              <img src="images/audience-musician.png" alt="Музыкант на сцене" />
+              <span aria-hidden="true"></span>
+              <b>Смотреть</b>
+            </a>
+          </div>
+          <div class="audience__equalizer" aria-hidden="true">
+            <i style="--bars: 2"></i><i style="--bars: 5"></i><i style="--bars: 2"></i>
+            <i style="--bars: 2"></i><i style="--bars: 1"></i><i style="--bars: 1"></i>
+            <i style="--bars: 1"></i><i style="--bars: 1"></i><i style="--bars: 2"></i>
+            <i style="--bars: 2"></i><i style="--bars: 3"></i><i style="--bars: 5"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="container">
+          <p class="eyebrow">Тарифы</p>
+          <div class="prices">
+            <article>
+              <p class="price">0₽</p>
+              <h3>Бесплатно</h3>
+              <p>Одна анкета и 10 мэтчей<br />в месяц</p>
+            </article>
+            <article>
+              <p class="price">390₽</p>
+              <h3>Pro</h3>
+              <p>Неограниченное<br />количество анкет и мэтчей</p>
+            </article>
+            <article>
+              <p class="price">990₽</p>
+              <h3>Премиум</h3>
+              <p>Индивидуальная подписка<br />на внеплановые репетиции</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container faq">
+          <p class="eyebrow">FAQ</p>
+          <details name="faq" open>
+            <summary>Можно найти музыканта на один раз?</summary>
+            <p>Да, Alter Band рассчитан в том числе на разовые проекты.</p>
+          </details>
+          <details name="faq">
+            <summary>Кто определяет гонорар?</summary>
+            <p>Артист и музыкант обсуждают сумму и условия оплаты напрямую.</p>
+          </details>
+          <details name="faq">
+            <summary>Можно оставить заявку, если<br />я сессионный музыкант?</summary>
+            <p>Да. Оставь свои контакты, и мы расскажем об условиях участия в первом запуске.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="signup" id="signup">
+        <img src="images/signup-background.png" alt="Музыканты выступают на сцене" />
+        <div class="signup__content container">
+          <h2><strong>Попробуй</strong><span>Первым</span></h2>
+          <p>Сейчас Alter Band готовится к запуску.<br />Оставь e-mail, чтобы получить приглашение<br />и узнать условия участия в первом запуске.</p>
+          <form class="signup__form" novalidate>
+            <label class="sr-only" for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="Введи свой e-mail" required />
+            <button type="submit">Отправить</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="nav container" aria-label="Навигация в подвале">
+        <a href="#about">О&nbsp; нас</a>
+        <a href="#benefits">Преимущества</a>
+        <a href="#audience">Для кого</a>
+        <a href="#process">Как работает</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="footer__logo" href="#top" aria-label="Alter Band, наверх"><span>Alter</span><i>Band</i></a>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
