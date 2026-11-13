@@ -14,11 +14,21 @@
   <body>
     <header class="hero" id="top">
       <nav class="nav container" aria-label="Основная навигация">
-        <a href="#about">О нас</a>
-        <a href="#benefits">Преимущества</a>
-        <a href="#audience">Для кого</a>
-        <a href="#process">Как работает</a>
-        <a href="#faq">FAQ</a>
+        <div class="nav__links" id="mobile-menu">
+          <a href="#about">О нас</a>
+          <a href="#benefits">Преимущества</a>
+          <a href="#audience">Для кого</a>
+          <a href="#process">Как работает</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          Меню
+        </button>
       </nav>
       <div class="hero__content container">
         <div class="wordmark" aria-label="Alter Band">
@@ -123,16 +133,14 @@
           <p class="eyebrow">Кому подойдёт сервис?</p>
           <div class="audience__content">
             <div class="audience__list">
-              <h2>Артистам</h2>
-              <h2>Группам</h2>
-              <h2>Продюсерам</h2>
-              <h2>Сессионным музыкантам</h2>
+              <button class="audience__option is-active" type="button" data-image="images/audience-musician.png" data-alt="Артист выступает с микрофоном" aria-pressed="true">Артистам</button>
+              <button class="audience__option" type="button" data-image="images/concert-musician.png" data-alt="Гитарист выступает с группой" aria-pressed="false">Группам</button>
+              <button class="audience__option" type="button" data-image="images/about-musician.png" data-alt="Музыкант записывает басовую партию" aria-pressed="false">Продюсерам</button>
+              <button class="audience__option" type="button" data-image="images/benefits-musician.png" data-alt="Барабанщица играет на установке" aria-pressed="false">Сессионным музыкантам</button>
             </div>
-            <a class="audience__preview" href="#signup" aria-label="Смотреть анкету музыканта">
-              <img src="images/audience-musician.png" alt="Музыкант на сцене" />
-              <span aria-hidden="true"></span>
-              <b>Смотреть</b>
-            </a>
+            <div class="audience__preview" aria-live="polite">
+              <img src="images/audience-musician.png" alt="Артист выступает с микрофоном" />
+            </div>
           </div>
           <div class="audience__equalizer" aria-hidden="true">
             <i style="--bars: 2"></i><i style="--bars: 5"></i><i style="--bars: 2"></i>
@@ -146,7 +154,7 @@
       <section class="section" id="pricing">
         <div class="container">
           <p class="eyebrow">Тарифы</p>
-          <div class="prices">
+          <div class="prices" tabindex="0" aria-label="Карусель тарифов">
             <article>
               <p class="price">0₽</p>
               <h3>Бесплатно</h3>
@@ -162,6 +170,10 @@
               <h3>Премиум</h3>
               <p>Индивидуальная подписка<br />на внеплановые репетиции</p>
             </article>
+          </div>
+          <div class="pricing-controls" aria-label="Управление каруселью тарифов">
+            <button class="pricing-control pricing-control--prev" type="button" aria-label="Предыдущий тариф">&larr;</button>
+            <button class="pricing-control pricing-control--next" type="button" aria-label="Следующий тариф">&rarr;</button>
           </div>
         </div>
       </section>
