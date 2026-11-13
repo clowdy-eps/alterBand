@@ -8,6 +8,7 @@
       content="Alter Band помогает найти сессионного рок-музыканта для записи или концерта за 24 часа."
     />
     <link rel="canonical" href="https://alterband.ru/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
     <title>Alter Band — поиск сессионных рок-музыкантов</title>
   </head>
@@ -21,14 +22,17 @@
           <a href="#process">Как работает</a>
           <a href="#faq">FAQ</a>
         </div>
-        <button
-          class="nav__toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          Меню
-        </button>
+        <div class="nav__actions">
+          <a class="nav__cta" href="#signup">Попробовать</a>
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            Меню
+          </button>
+        </div>
       </nav>
       <div class="hero__content container">
         <div class="wordmark" aria-label="Alter Band">
@@ -65,10 +69,17 @@
       </section>
 
       <section class="section problem">
-        <div class="container problem__inner">
-          <h2><span>Спасаем</span><span>концерты</span></h2>
-          <img src="images/concert-musician.png" alt="Гитарист на концерте" />
-          <p>Знакомые заняты. А концерт уже через неделю.... найти музыканта<br />и договориться всё ещё нужно.</p>
+        <div class="problem__sticky">
+          <div class="container problem__inner">
+            <h2><span>Спасаем</span><span>концерты</span></h2>
+            <div class="problem__media" role="img" aria-label="Гитарист выступает на концерте">
+              <img src="images/about-detail.png" alt="" aria-hidden="true" />
+              <img src="images/audience-musician.png" alt="" aria-hidden="true" />
+              <img src="images/benefits-musician.png" alt="" aria-hidden="true" />
+              <img class="is-current" src="images/concert-musician.png" alt="" aria-hidden="true" />
+            </div>
+            <p>Знакомые заняты. А концерт уже через неделю.... найти музыканта<br />и договориться всё ещё нужно.</p>
+          </div>
         </div>
       </section>
 
@@ -87,10 +98,12 @@
               </div>
             </article>
             <article class="feature">
+              <img src="images/step-listen.png" alt="Музыкант играет на гитаре" />
               <h3>Поиск под задачу</h3>
               <p>Укажи инструмент, формат проекта, дату и бюджет, если он уже известен.</p>
             </article>
             <article class="feature">
+              <img src="images/step-agreement.png" alt="Музыканты выступают вместе" />
               <h3>Обсуждение напрямую</h3>
               <p>Договорись с музыкантом о материале, подготовке, сроках и гонораре.</p>
             </article>
@@ -122,8 +135,8 @@
             </article>
           </div>
           <div class="slider-controls" aria-label="Управление слайдером">
-            <button class="slider-control slider-control--prev" type="button" aria-label="Предыдущий этап">←</button>
-            <button class="slider-control slider-control--next" type="button" aria-label="Следующий этап">→</button>
+            <button class="slider-control slider-control--prev" type="button" aria-label="Предыдущий этап"><span aria-hidden="true"></span></button>
+            <button class="slider-control slider-control--next" type="button" aria-label="Следующий этап"><span aria-hidden="true"></span></button>
           </div>
         </div>
       </section>
@@ -133,20 +146,20 @@
           <p class="eyebrow">Кому подойдёт сервис?</p>
           <div class="audience__content">
             <div class="audience__list">
-              <button class="audience__option is-active" type="button" data-image="images/audience-musician.png" data-alt="Артист выступает с микрофоном" aria-pressed="true">Артистам</button>
-              <button class="audience__option" type="button" data-image="images/concert-musician.png" data-alt="Гитарист выступает с группой" aria-pressed="false">Группам</button>
-              <button class="audience__option" type="button" data-image="images/about-musician.png" data-alt="Музыкант записывает басовую партию" aria-pressed="false">Продюсерам</button>
-              <button class="audience__option" type="button" data-image="images/benefits-musician.png" data-alt="Барабанщица играет на установке" aria-pressed="false">Сессионным музыкантам</button>
+              <p class="audience__option" data-image="images/audience-musician.png" data-alt="Артист выступает с микрофоном">Артистам</p>
+              <p class="audience__option" data-image="images/concert-musician.png" data-alt="Гитарист выступает с группой">Группам</p>
+              <p class="audience__option" data-image="images/about-musician.png" data-alt="Музыкант записывает басовую партию">Продюсерам</p>
+              <p class="audience__option" data-image="images/benefits-musician.png" data-alt="Барабанщица играет на установке">Сессионным музыкантам</p>
             </div>
             <div class="audience__preview" aria-live="polite">
               <img src="images/audience-musician.png" alt="Артист выступает с микрофоном" />
             </div>
           </div>
           <div class="audience__equalizer" aria-hidden="true">
-            <i style="--bars: 2"></i><i style="--bars: 5"></i><i style="--bars: 2"></i>
-            <i style="--bars: 2"></i><i style="--bars: 1"></i><i style="--bars: 1"></i>
-            <i style="--bars: 1"></i><i style="--bars: 1"></i><i style="--bars: 2"></i>
-            <i style="--bars: 2"></i><i style="--bars: 3"></i><i style="--bars: 5"></i>
+            <i style="--a: 4; --b: 6; --c: 5; --d: 7"></i><i style="--a: 7; --b: 5; --c: 6; --d: 4"></i><i style="--a: 5; --b: 7; --c: 4; --d: 6"></i>
+            <i style="--a: 4; --b: 3; --c: 6; --d: 5"></i><i style="--a: 1; --b: 2; --c: 1; --d: 2"></i><i style="--a: 2; --b: 1; --c: 2; --d: 1"></i>
+            <i style="--a: 1; --b: 2; --c: 1; --d: 2"></i><i style="--a: 2; --b: 1; --c: 2; --d: 1"></i><i style="--a: 4; --b: 6; --c: 3; --d: 5"></i>
+            <i style="--a: 5; --b: 4; --c: 7; --d: 6"></i><i style="--a: 7; --b: 5; --c: 6; --d: 4"></i><i style="--a: 6; --b: 7; --c: 4; --d: 5"></i>
           </div>
         </div>
       </section>
@@ -172,8 +185,8 @@
             </article>
           </div>
           <div class="pricing-controls" aria-label="Управление каруселью тарифов">
-            <button class="pricing-control pricing-control--prev" type="button" aria-label="Предыдущий тариф">&larr;</button>
-            <button class="pricing-control pricing-control--next" type="button" aria-label="Следующий тариф">&rarr;</button>
+            <button class="pricing-control pricing-control--prev" type="button" aria-label="Предыдущий тариф"><span aria-hidden="true"></span></button>
+            <button class="pricing-control pricing-control--next" type="button" aria-label="Следующий тариф"><span aria-hidden="true"></span></button>
           </div>
         </div>
       </section>
@@ -212,16 +225,44 @@
     </main>
 
     <footer class="footer">
-      <nav class="nav container" aria-label="Навигация в подвале">
-        <a href="#about">О&nbsp; нас</a>
-        <a href="#benefits">Преимущества</a>
-        <a href="#audience">Для кого</a>
-        <a href="#process">Как работает</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+      <div class="footer__links">
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+          <p>Навигация</p>
+          <div class="footer__nav-columns">
+            <div>
+              <a href="#about">О&nbsp; нас</a>
+              <a href="#benefits">Преимущества</a>
+              <a href="#audience">Для кого</a>
+            </div>
+            <div>
+              <a href="#process">Как работает</a>
+              <a href="#faq">FAQ</a>
+            </div>
+          </div>
+        </nav>
+        <div class="footer__socials">
+          <p>Соцсети</p>
+          <a href="https://dzen.ru/id/6ae25464f3d703645be7f0e9" target="_blank" rel="noopener noreferrer">Дзен <span aria-hidden="true">↗</span></a>
+          <a href="https://web.telegram.org/a/#-1004344284342" target="_blank" rel="noopener noreferrer">Telegram <span aria-hidden="true">↗</span></a>
+          <a href="https://vk.ru/alter_band" target="_blank" rel="noopener noreferrer">VK <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer__beta">
+          <p>Beta-версия</p>
+          <a class="footer__beta-link" href="https://web.telegram.org/a/#9233189927" target="_blank" rel="noopener noreferrer">Telegram-бот <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="footer__contacts">
+          <p>Контакты</p>
+          <a href="tel:+79138874529">8 (913) 887-45-29</a>
+          <a href="mailto:alterbnd@yandex.com">alterbnd@yandex.com</a>
+        </div>
+      </div>
       <a class="footer__logo" href="#top" aria-label="Alter Band, наверх"><span>Alter</span><i>Band</i></a>
     </footer>
 
+    <a class="compact-logo" href="#top" aria-label="Alter Band, наверх">
+      <img src="images/logo.svg" alt="" />
+    </a>
+    <span class="custom-cursor" aria-hidden="true"></span>
     <script src="script.js"></script>
   </body>
 </html>
