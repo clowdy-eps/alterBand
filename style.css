@@ -193,6 +193,10 @@ input {
   color: var(--white);
   background-color: var(--black);
   background-image: url('images/backSection1.png');
+  background-image: image-set(
+    url('images/backSection1.webp') type('image/webp'),
+    url('images/backSection1.png') type('image/png')
+  );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
