@@ -158,6 +158,7 @@ form?.addEventListener('submit', async (event) => {
     }
 
     status.textContent = 'Спасибо! Заявка отправлена.';
+    window.ym?.(114247548, 'reachGoal', 'lead_sent');
     form.reset();
   } catch (error) {
     console.error('Не удалось отправить форму:', error);
