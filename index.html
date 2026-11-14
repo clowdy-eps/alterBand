@@ -37,13 +37,66 @@
     />
     <link rel="canonical" href="https://alterband.ru/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preload" as="image" href="images/backSection1.webp" type="image/webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/backSection1-mobile-900.avif"
+      imagesrcset="images/backSection1-mobile-600.avif 600w, images/backSection1-mobile-900.avif 900w, images/backSection1-mobile-1200.avif 1200w"
+      imagesizes="100vw"
+      media="(max-width: 600px)"
+      type="image/avif"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/backSection1-1920.avif"
+      imagesrcset="images/backSection1-768.avif 768w, images/backSection1-1280.avif 1280w, images/backSection1-1920.avif 1920w, images/backSection1-2560.avif 2560w, images/backSection1-3840.avif 3840w"
+      imagesizes="100vw"
+      media="(min-width: 601px)"
+      type="image/avif"
+      fetchpriority="high"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Alter Band — поиск сессионных рок-музыкантов</title>
   </head>
   <body>
     <noscript><div><img src="https://mc.yandex.com/watch/114247548" style="position: absolute; left: -9999px" alt="" /></div></noscript>
     <header class="hero" id="top">
+      <picture class="hero__picture" aria-hidden="true">
+        <source
+          media="(max-width: 600px)"
+          type="image/avif"
+          srcset="images/backSection1-mobile-600.avif 600w, images/backSection1-mobile-900.avif 900w, images/backSection1-mobile-1200.avif 1200w"
+          sizes="100vw"
+        />
+        <source
+          media="(max-width: 600px)"
+          type="image/webp"
+          srcset="images/backSection1-mobile-600.webp 600w, images/backSection1-mobile-900.webp 900w, images/backSection1-mobile-1200.webp 1200w"
+          sizes="100vw"
+        />
+        <source
+          type="image/avif"
+          srcset="images/backSection1-768.avif 768w, images/backSection1-1280.avif 1280w, images/backSection1-1920.avif 1920w, images/backSection1-2560.avif 2560w, images/backSection1-3840.avif 3840w"
+          sizes="100vw"
+        />
+        <source
+          type="image/webp"
+          srcset="images/backSection1-768.webp 768w, images/backSection1-1280.webp 1280w, images/backSection1-1920.webp 1920w, images/backSection1-2560.webp 2560w, images/backSection1.webp 3840w"
+          sizes="100vw"
+        />
+        <img
+          class="hero__image"
+          src="images/backSection1.webp"
+          width="3840"
+          height="1800"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          alt=""
+        />
+      </picture>
       <nav class="nav container" aria-label="Основная навигация">
         <div class="nav__links" id="mobile-menu">
           <a href="#about">О нас</a>
@@ -92,8 +145,8 @@
             </p>
           </div>
           <div class="about-images">
-            <img class="about-images__detail" src="images/about-detail.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="Музыкант на сцене" />
-            <img class="about-images__main" src="images/about-musician.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="Гитаристка выступает на сцене" />
+            <img class="about-images__detail" src="images/about-detail.webp" srcset="images/about-detail-320.webp 320w, images/about-detail-640.webp 640w, images/about-detail-960.webp 960w, images/about-detail.webp 1254w" sizes="(max-width: 600px) 31vw, 9.7917vw" width="1254" height="1254" loading="lazy" decoding="async" alt="Музыкант на сцене" />
+            <img class="about-images__main" src="images/about-musician.webp" srcset="images/about-musician-480.webp 480w, images/about-musician-750.webp 750w, images/about-musician.webp 1122w" sizes="(max-width: 600px) 58vw, 22.7084vw" width="1122" height="1402" loading="lazy" decoding="async" alt="Гитаристка выступает на сцене" />
           </div>
         </div>
       </section>
@@ -103,10 +156,10 @@
           <div class="container problem__inner">
             <h2><span>Спасаем</span><span>концерты</span></h2>
             <div class="problem__media" role="img" aria-label="Гитарист выступает на концерте">
-              <img src="images/about-detail.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="" aria-hidden="true" />
-              <img src="images/audience-musician.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="" aria-hidden="true" />
-              <img src="images/benefits-musician.webp" width="1161" height="1354" loading="lazy" decoding="async" alt="" aria-hidden="true" />
-              <img class="is-current" src="images/concert-musician.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="" aria-hidden="true" />
+              <img src="images/about-detail.webp" srcset="images/about-detail-320.webp 320w, images/about-detail-640.webp 640w, images/about-detail-960.webp 960w, images/about-detail.webp 1254w" sizes="(max-width: 600px) 92vw, 23.3855vw" width="1254" height="1254" loading="lazy" decoding="async" alt="" aria-hidden="true" />
+              <img src="images/audience-musician.webp" srcset="images/audience-musician-320.webp 320w, images/audience-musician-640.webp 640w, images/audience-musician-960.webp 960w, images/audience-musician.webp 1254w" sizes="(max-width: 600px) 92vw, 23.3855vw" width="1254" height="1254" loading="lazy" decoding="async" alt="" aria-hidden="true" />
+              <img src="images/benefits-musician.webp" srcset="images/benefits-musician-400.webp 400w, images/benefits-musician-800.webp 800w, images/benefits-musician.webp 1161w" sizes="(max-width: 600px) 92vw, 23.3855vw" width="1161" height="1354" loading="lazy" decoding="async" alt="" aria-hidden="true" />
+              <img class="is-current" src="images/concert-musician.webp" srcset="images/concert-musician-320.webp 320w, images/concert-musician-640.webp 640w, images/concert-musician-960.webp 960w, images/concert-musician.webp 1254w" sizes="(max-width: 600px) 92vw, 23.3855vw" width="1254" height="1254" loading="lazy" decoding="async" alt="" aria-hidden="true" />
             </div>
             <p>Знакомые заняты. А концерт уже через неделю.... найти музыканта<br />и договориться всё ещё нужно.</p>
           </div>
@@ -118,7 +171,7 @@
           <p class="eyebrow">Преимущества<br />сервиса</p>
           <div class="features">
             <article class="feature feature--image">
-              <img src="images/benefits-musician.webp" width="1161" height="1354" loading="lazy" decoding="async" alt="Музыкант играет на сцене" />
+              <img src="images/benefits-musician.webp" srcset="images/benefits-musician-400.webp 400w, images/benefits-musician-800.webp 800w, images/benefits-musician.webp 1161w" sizes="(max-width: 600px) 1px, 15vw" width="1161" height="1354" loading="lazy" decoding="async" alt="Музыкант играет на сцене" />
               <div>
                 <h3>Видеолента</h3>
                 <p>
@@ -128,12 +181,12 @@
               </div>
             </article>
             <article class="feature">
-              <img src="images/step-listen.webp" width="1774" height="887" loading="lazy" decoding="async" alt="Музыкант играет на гитаре" />
+              <img src="images/step-listen.webp" srcset="images/step-listen-480.webp 480w, images/step-listen-960.webp 960w, images/step-listen-1440.webp 1440w, images/step-listen.webp 1774w" sizes="(max-width: 600px) 1px, 15vw" width="1774" height="887" loading="lazy" decoding="async" alt="Музыкант играет на гитаре" />
               <h3>Поиск под задачу</h3>
               <p>Укажи инструмент, формат проекта, дату и бюджет, если он уже известен.</p>
             </article>
             <article class="feature">
-              <img src="images/step-agreement.webp" width="1774" height="887" loading="lazy" decoding="async" alt="Музыканты выступают вместе" />
+              <img src="images/step-agreement.webp" srcset="images/step-agreement-480.webp 480w, images/step-agreement-960.webp 960w, images/step-agreement-1440.webp 1440w, images/step-agreement.webp 1774w" sizes="(max-width: 600px) 1px, 15vw" width="1774" height="887" loading="lazy" decoding="async" alt="Музыканты выступают вместе" />
               <h3>Обсуждение напрямую</h3>
               <p>Договорись с музыкантом о материале, подготовке, сроках и гонораре.</p>
             </article>
@@ -149,19 +202,19 @@
               <span class="step__number">1</span>
               <h3>Расскажи о проекте</h3>
               <p>Например, тебе нужен басист на запись двух инди-треков. Укажи даты и добавь демо, если оно есть.</p>
-              <img src="images/step-project.webp" width="1774" height="887" loading="lazy" decoding="async" alt="Музыканты обсуждают проект" />
+              <img src="images/step-project.webp" srcset="images/step-project-480.webp 480w, images/step-project-960.webp 960w, images/step-project-1440.webp 1440w, images/step-project.webp 1774w" sizes="(max-width: 600px) 92vw, 37.9102vw" width="1774" height="887" loading="lazy" decoding="async" alt="Музыканты обсуждают проект" />
             </article>
             <article class="step">
               <span class="step__number">2</span>
               <h3>Послушай музыкантов</h3>
               <p>Посмотри примеры игры и выбери, с кем хочешь обсудить проект.</p>
-              <img src="images/step-listen.webp" width="1774" height="887" loading="lazy" decoding="async" alt="Музыкант играет на гитаре" />
+              <img src="images/step-listen.webp" srcset="images/step-listen-480.webp 480w, images/step-listen-960.webp 960w, images/step-listen-1440.webp 1440w, images/step-listen.webp 1774w" sizes="(max-width: 600px) 92vw, 37.9102vw" width="1774" height="887" loading="lazy" decoding="async" alt="Музыкант играет на гитаре" />
             </article>
             <article class="step">
               <span class="step__number">3</span>
               <h3>Договорись об условиях</h3>
               <p>Сверьте даты, объём работы и гонорар.</p>
-              <img src="images/step-agreement.webp" width="1774" height="887" loading="lazy" decoding="async" alt="Рок-группа выступает на сцене" />
+              <img src="images/step-agreement.webp" srcset="images/step-agreement-480.webp 480w, images/step-agreement-960.webp 960w, images/step-agreement-1440.webp 1440w, images/step-agreement.webp 1774w" sizes="(max-width: 600px) 92vw, 37.9102vw" width="1774" height="887" loading="lazy" decoding="async" alt="Рок-группа выступает на сцене" />
             </article>
           </div>
           <div class="slider-controls" aria-label="Управление слайдером">
@@ -176,13 +229,13 @@
           <p class="eyebrow">Кому подойдёт сервис?</p>
           <div class="audience__content">
             <div class="audience__list">
-              <p class="audience__option" data-image="images/audience-musician.webp" data-alt="Артист выступает с микрофоном">Артистам</p>
-              <p class="audience__option" data-image="images/concert-musician.webp" data-alt="Гитарист выступает с группой">Группам</p>
-              <p class="audience__option" data-image="images/about-musician.webp" data-alt="Музыкант записывает басовую партию">Продюсерам</p>
-              <p class="audience__option" data-image="images/benefits-musician.webp" data-alt="Барабанщица играет на установке">Сессионным музыкантам</p>
+              <p class="audience__option" data-image="images/audience-musician.webp" data-srcset="images/audience-musician-320.webp 320w, images/audience-musician-640.webp 640w, images/audience-musician-960.webp 960w, images/audience-musician.webp 1254w" data-alt="Артист выступает с микрофоном">Артистам</p>
+              <p class="audience__option" data-image="images/concert-musician.webp" data-srcset="images/concert-musician-320.webp 320w, images/concert-musician-640.webp 640w, images/concert-musician-960.webp 960w, images/concert-musician.webp 1254w" data-alt="Гитарист выступает с группой">Группам</p>
+              <p class="audience__option" data-image="images/about-musician.webp" data-srcset="images/about-musician-480.webp 480w, images/about-musician-750.webp 750w, images/about-musician.webp 1122w" data-alt="Музыкант записывает басовую партию">Продюсерам</p>
+              <p class="audience__option" data-image="images/benefits-musician.webp" data-srcset="images/benefits-musician-400.webp 400w, images/benefits-musician-800.webp 800w, images/benefits-musician.webp 1161w" data-alt="Барабанщица играет на установке">Сессионным музыкантам</p>
             </div>
             <div class="audience__preview" aria-live="polite">
-              <img src="images/audience-musician.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="Артист выступает с микрофоном" />
+              <img src="images/audience-musician.webp" srcset="images/audience-musician-320.webp 320w, images/audience-musician-640.webp 640w, images/audience-musician-960.webp 960w, images/audience-musician.webp 1254w" sizes="(max-width: 600px) 1px, 13.2813vw" width="1254" height="1254" loading="lazy" decoding="async" alt="Артист выступает с микрофоном" />
             </div>
           </div>
           <div class="audience__equalizer" aria-hidden="true">
