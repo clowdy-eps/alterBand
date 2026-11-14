@@ -382,7 +382,6 @@ input {
     display: flex;
     width: 290px;
     padding: 22px;
-    border: 1px solid rgb(0 0 0 / 14%);
     border-radius: 8px;
     color: var(--black);
     background: #f0efeb;
@@ -408,10 +407,6 @@ input {
     font-size: 16px;
     line-height: 1.1;
     text-align: left;
-  }
-
-  .hero .nav.is-compact .nav__links a + a {
-    border-top: 1px solid rgb(0 0 0 / 13%);
   }
 
   .hero .nav.is-compact.is-open .nav__links {
