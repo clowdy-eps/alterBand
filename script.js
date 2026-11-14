@@ -129,17 +129,43 @@ finePointerQuery.addEventListener('change', () => {
 
 const form = document.querySelector('.signup__form');
 const status = document.querySelector('.form-status');
+const submitButton = form?.querySelector('button[type="submit"]');
 
-form?.addEventListener('submit', (event) => {
+form?.addEventListener('submit', async (event) => {
   event.preventDefault();
 
   if (!form.checkValidity()) {
     status.textContent = 'Введи корректный e-mail.';
+    form.reportValidity();
     return;
   }
 
-  status.textContent = 'Спасибо! Форма пока работает в демонстрационном режиме.';
-  form.reset();
+  status.textContent = 'Отправляем…';
+  submitButton.disabled = true;
+  form.setAttribute('aria-busy', 'true');
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Formspree returned ${response.status}`);
+    }
+
+    status.textContent = 'Спасибо! Заявка отправлена.';
+    form.reset();
+  } catch (error) {
+    console.error('Не удалось отправить форму:', error);
+    status.textContent = 'Не получилось отправить. Попробуй ещё раз.';
+  } finally {
+    submitButton.disabled = false;
+    form.removeAttribute('aria-busy');
+  }
 });
 
 const audienceOptions = [...document.querySelectorAll('.audience__option')];
