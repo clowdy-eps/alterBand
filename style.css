@@ -1025,6 +1025,19 @@ input {
   display: none;
 }
 
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  #process .steps {
+    cursor: grab;
+  }
+
+  #process .steps.is-dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+    cursor: grabbing;
+    user-select: none;
+  }
+}
+
 #process .step {
   position: relative;
   display: block;
@@ -1063,7 +1076,7 @@ input {
 #process .step p {
   position: absolute;
   top: 13.0208333vw;
-  left: calc(34.7395833vw - var(--step-content-shift));
+  left: calc(26.875vw - var(--step-content-shift));
   width: 32.34375vw;
   max-width: none;
   margin: 0;
@@ -1076,13 +1089,13 @@ input {
 
 #process .step:nth-child(2) p {
   top: 12.7604167vw;
-  left: calc(35vw - var(--step-content-shift));
+  left: calc(26.875vw - var(--step-content-shift));
   width: 29.4791667vw;
 }
 
 #process .step:nth-child(3) p {
   top: 12.7604167vw;
-  left: calc(34.375vw - var(--step-content-shift));
+  left: calc(28.6979167vw - var(--step-content-shift));
   width: 22.65625vw;
 }
 
@@ -2941,20 +2954,27 @@ input {
     flex-direction: column;
   }
 
+  .problem {
+    padding-top: clamp(8.5rem, 36vw, 10rem);
+  }
+
   .problem h2 span {
     width: 100%;
     font-size: 9.2vw;
     line-height: 0.93;
     white-space: normal;
+    transition: transform 80ms linear;
   }
 
   .problem h2 span:last-child {
     left: auto;
+    transform: translate3d(var(--problem-mobile-right-x, 115%), 0, 0);
     text-align: right;
   }
 
   .problem h2 span:first-child {
     left: auto;
+    transform: translate3d(var(--problem-mobile-left-x, -115%), 0, 0);
   }
 
   .problem img {
@@ -3221,10 +3241,11 @@ input {
   }
 
   #audience .audience__preview {
-    display: none;
-    width: 75vw;
-    height: 75vw;
-    margin: 16vw auto 0;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 16vw 0 0;
+    aspect-ratio: 1;
   }
 
   #audience .audience__equalizer {
@@ -3579,19 +3600,132 @@ input {
     left: 0;
     display: block;
     width: 100%;
-    font-size: 19vw;
+    font-size: 20vw;
     line-height: 0.8;
-    letter-spacing: -0.95vw;
+    letter-spacing: -1vw;
     text-align: center;
   }
 
   .footer__logo i {
-    top: 24vw;
+    top: 20.5vw;
     left: 0;
     display: block;
     width: 100%;
     font-size: 12vw;
     line-height: 0.85;
     text-align: center;
+  }
+}
+
+/* Desktop keeps the 1920x900 vw composition. Full-screen scenes fill the
+   viewport; content-driven scenes use a shared visual rhythm. */
+@media (min-width: 1025px) {
+  :root {
+    --desktop-stage-base: 46.875vw;
+    --desktop-fullscreen-height: max(100vh, var(--desktop-stage-base));
+    --desktop-fullscreen-offset: calc(
+      (var(--desktop-fullscreen-height) - var(--desktop-stage-base)) / 2
+    );
+    --problem-stage-offset: max(
+      0px,
+      calc(100vh - var(--desktop-stage-base))
+    );
+  }
+
+  .hero,
+  .signup {
+    height: var(--desktop-fullscreen-height);
+  }
+
+  #about,
+  #benefits,
+  #process,
+  #faq {
+    height: var(--desktop-stage-base);
+  }
+
+  /* Their visible content ends at different points inside the 1920x900
+     composition. These two heights keep the visual gap between sections
+     aligned with the rest of the page. */
+  #audience {
+    height: 54.53125vw;
+  }
+
+  #pricing {
+    height: 42.34375vw;
+  }
+
+  #about .section-grid,
+  #benefits > .container,
+  #process > .container,
+  #audience > .container,
+  #pricing > .container {
+    top: 0;
+    bottom: auto;
+    height: var(--desktop-stage-base);
+  }
+
+  .hero__content,
+  .signup__content {
+    top: var(--desktop-fullscreen-offset);
+    bottom: auto;
+    height: var(--desktop-stage-base);
+  }
+
+  #about,
+  #benefits {
+    overflow: hidden;
+  }
+
+  .problem {
+    height: calc(100vh + var(--desktop-stage-base));
+  }
+
+  .problem::before {
+    height: calc(clamp(180px, 15vw, 300px) + var(--problem-stage-offset));
+  }
+
+  .problem__sticky {
+    height: 100vh;
+  }
+
+  .problem__inner {
+    top: var(--problem-stage-offset);
+    bottom: auto;
+    height: var(--desktop-stage-base);
+  }
+
+  .signup > img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #faq {
+    display: block;
+    height: auto;
+    min-height: 0;
+    padding: 9.7916667vw 0 17.1875vw;
+  }
+
+  .footer {
+    --desktop-footer-height: clamp(43.75vw, 78vh, 52vw);
+    --footer-logo-top: calc(var(--desktop-footer-height) - 19.2708333vw);
+    height: var(--desktop-footer-height);
+  }
+
+  .footer__links {
+    top: clamp(5.2083333vw, 10vh, 8vw);
+  }
+
+  .footer__logo span {
+    top: var(--footer-logo-top);
+  }
+
+  .footer__logo i {
+    top: calc(var(--footer-logo-top) + 2.9583333vw);
   }
 }
